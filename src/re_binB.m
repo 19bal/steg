@@ -7,6 +7,7 @@ function b = re_binB(rB)
 %   b = bitand(16, 1)
 % 
 %   See also st_binB, st_BinBl, st_TinIm
+% kucuk bir degisiklik
 
 % $Date: 2009/11/18 16:25 $
 
