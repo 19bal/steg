@@ -12,3 +12,4 @@ function b = re_binB(rB)
 % $Date: 2009/11/18 16:25 $
 
 b = bitand(rB, bin2dec('00000001'));
+% bin2dec: binary to decimal cevrim
