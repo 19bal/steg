@@ -7,7 +7,7 @@ function rBl = st_BinBl(tB, Bl)
 %   rBl = st_BinBl(tB, Bl)
 
 teB = dec2bin(tB, 8);
-in = 1;
+in = 1; % neden 1 atadik?
 
 rBl(1, 1) = Bl(1, 1);
 for i=1:3
