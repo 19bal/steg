@@ -3,7 +3,7 @@
 function b = re_binB(rB)
 %RE_BINB rB icerisinden biti (b) cikart
 %   ...
-%   Example
+%   Ornek Kullanim
 %   -------
 %   b = bitand(17, 1)
 %   b = bitand(16, 1)
@@ -14,4 +14,4 @@ function b = re_binB(rB)
 % $Date: 2009/11/18 16:25 $
 
 b = bitand(rB, bin2dec('00000001'));
-% bin2dec: binary to decimal cevrim
+

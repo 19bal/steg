@@ -1,13 +1,20 @@
 function rBl = st_BinBl(tB, Bl)
-
-%   Example
+%function rBl = st_BinBl(tB, Bl)
+%
+%st_BinBl tB byte'ini Bl blogu icerisine yerlestir.
+%
+%   Ornek Kullanim
 %   -------
-%   tB = unicode2native('A');
-%   Bl = magic(3);
-%   rBl = st_BinBl(tB, Bl)
+%   FullBlock = st_BinBl(StegoByte, EmpBlock)
+%   
+%	Sayisal ornek verebilir miyiz?
+% 
+%   See also st_binB
+
+% $Date: 2009/12/08 16:25 $
 
 teB = dec2bin(tB, 8);
-in = 1; % neden 1 atadik?
+in = 1;
 
 rBl(1, 1) = Bl(1, 1);
 for i=1:3
@@ -17,6 +24,6 @@ for i=1:3
         b = str2num(teB(in));
         in = in + 1;
         rB = st_binB(b, B);
-        rBl(i, j) = rB;
+        rBl(i, j) = rB;%Burada ozyineleme (recursion) mu yapmisiz?
     end
 end
