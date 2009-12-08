@@ -1,4 +1,4 @@
-%Emre bunu 08.12.2009 / 12.55 te degistirdi.
+%Emre bunu 08.12.2009 / 15.04 te degistirdi.
 
 function b = re_binB(rB)
 %RE_BINB rB icerisinden biti (b) cikart
