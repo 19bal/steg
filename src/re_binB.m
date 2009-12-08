@@ -1,3 +1,5 @@
+%Emre bunu 08.12.2009 / 12.55 te degistirdi.
+
 function b = re_binB(rB)
 %RE_BINB rB icerisinden biti (b) cikart
 %   ...
