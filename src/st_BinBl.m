@@ -5,11 +5,15 @@ function rBl = st_BinBl(tB, Bl)
 %
 %   Ornek Kullanim
 %   -------
+%   tB = unicode2native('A');
+%   Bl = magic(3);
+%   rBl = st_BinBl(tB, Bl)
+%
 %   FullBlock = st_BinBl(StegoByte, EmpBlock)
 %   
 %	Sayisal ornek verebilir miyiz?
 % 
-%   See also st_binB
+%   See also st_binB, re_BinBl
 
 % $Date: 2009/12/08 16:25 $
 
@@ -24,6 +28,6 @@ for i=1:3
         b = str2num(teB(in));
         in = in + 1;
         rB = st_binB(b, B);
-        rBl(i, j) = rB;%Burada ozyineleme (recursion) mu yapmisiz?
+        rBl(i, j) = rB;
     end
 end
