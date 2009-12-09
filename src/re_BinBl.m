@@ -5,12 +5,21 @@ function tB = re_BinBl(rBl)
 %gizli veriyi alir ve tB byte' inin icine atarak
 %geri dondurur.
 %
-%   Ornek Kullanim
+%   Ornek Kullanim - 1
 %   -------
 %   tB = unicode2native('A')
 %   Bl = magic(3);
 %   rBl = st_BinBl(tB, Bl);
 %   rB = re_BinBl(rBl)
+%   
+%   Ornek Kullanim - 2
+%   -------
+%   chr = 'A'
+%   tB = unicode2native(chr);
+%   Bl = magic(3);
+%   rBl = st_BinBl(tB, Bl);
+%   rB = re_BinBl(rBl);
+%   rchr = native2unicode(rB)
 %   
 %   See also st_BinBl, st_binB
 
