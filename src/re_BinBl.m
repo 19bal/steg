@@ -7,11 +7,12 @@ function tB = re_BinBl(rBl)
 %
 %   Ornek Kullanim
 %   -------
-%   rBl = magic(3);
-%   tB = re_BinBl(rBl)
+%   tB = unicode2native('A')
+%   Bl = magic(3);
+%   rBl = st_BinBl(tB, Bl);
+%   rB = re_BinBl(rBl)
 %   
-% 
-%   See also st_binB
+%   See also st_BinBl, st_binB
 
 % $Date: 2009/12/09 16:25 $
 
