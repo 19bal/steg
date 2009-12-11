@@ -47,4 +47,5 @@ for bX=1:BSX,
 end
 % 5. nihayi resmi kaydet
 imshow(rimg);
+imwrite(rimg, 'st_manzara.bmp');
 return
