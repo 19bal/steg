@@ -46,4 +46,5 @@ for bX=1:BSX,
     if DI > DS, break; end
 end
 % 5. nihayi mesaji kaydet
+disp(data);
 dlmwrite('re_mesaj.txt', data, 'delimiter','');
