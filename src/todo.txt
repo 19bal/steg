@@ -1,4 +1,38 @@
 11.12.2009 Cuma
 
-1. Renkli görüntülerle çalışacak biçime getir
-2. DCT ile uygun blokların seçilmesini mümkün kıl
+1. RENKLI_GORUNTULER
+
+Tanım: 
+
+Renkli görüntülerle çalışacak biçime getir
+
+2. DCT_BLOK_SECICI
+
+Tanım:
+
+DCT ile uygun blokların seçilmesini mümkün kıl
+
+3. BUG NAME: MESAJ_UZUNLUGU
+
+Tanım:
+
+Resim içerisine mesaj saklanırken, mesaj uzunluğu verilmediğinden
+restore sırasında sorun yaşıyoruz.
+
+Çözüm:
+
+Resimdeki ilk bloğa mesaj boyutu saklanıyor.
+
+4. BUG NAME: MESAJ_UZUNLUGU_BUYUKSE
+
+Tanım:
+
+Mesaj boyutu, resimdeki blok sayisindan daha fazlaysa.
+
+Çözüm:
+
+5. MESAJDA_BOSLUK_KULLANIMI
+
+Tanım:
+
+mesaj.txt dosyasındaki boşluklarıda dikkate alacak şekilde tasarla
