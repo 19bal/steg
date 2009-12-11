@@ -1,0 +1,4 @@
+11.12.2009 Cuma
+
+1. Renkli görüntülerle çalışacak biçime getir
+2. DCT ile uygun blokların seçilmesini mümkün kıl
