@@ -11,7 +11,10 @@ img = rgb2gray(img);
 rimg = img;
 
 % 2. bloklara ayir
-% DI: Data Indis
+% DI: Data Index
+% DS: Data Size
+%  resmin ilk bloguna mesaj uzunlugunu koy
+DS = uint8(length(data));
 DI = 1;
 
 % BB: Blok Boyutu
@@ -27,7 +30,7 @@ BSY = floor(H / BBX);
 % 3. her bir bloga veriden bir Bayt yerlestir
 % 4. bloklari birlestir
 for bX=1:BSX,
-    for bY=1:BSY,
+    for bY=1:BSY,       
         konum.sol = (bX - 1) * BBX + 1;
         konum.sag = konum.sol + BBX - 1;
         konum.ust = (bY - 1) * BBY + 1;
@@ -35,15 +38,20 @@ for bX=1:BSX,
         
         Bl = img(konum.sol:konum.sag, konum.ust:konum.alt);
         
-        chr = data(DI);        
-        tB = unicode2native(chr);
+        if bX == 1 && bY == 1,
+            tB = DS;
+        else
+            chr = data(DI);
+            tB = unicode2native(chr);
+            DI = DI + 1;
+        end
+        
         rBl = st_BinBl(tB, Bl);
         
-        rimg(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;
-        DI = DI + 1;
-        if DI> size(data), break; end
+        rimg(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;        
+        if DI > DS, break; end
     end
-    if DI> size(data), break; end
+    if DI > DS, break; end
 end
 % 5. nihayi resmi kaydet
 imshow(rimg);
