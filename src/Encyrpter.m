@@ -12,9 +12,9 @@ function rimg = Encyrpter(img, data)
 %   imshow(rimg);
 %   imwrite(rimg, 'st_manzara.bmp');
 % 
-%   See also st_BinBl, st_binB
+%   See also st_BinBl, st_binB, Decyrpter
 
-% $Date: 2009/12/09 16:25 $
+% $Date: 2009/12/11 17:02 $
 
 % Algoritma
 % 1. resmi ve veri dosyasini oku
