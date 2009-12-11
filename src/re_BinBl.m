@@ -1,8 +1,8 @@
-function tB = re_BinBl(rBl)
-%function tB = re_BinBl(rBl)
+function rB = re_BinBl(rBl)
+%function rB = re_BinBl(rBl)
 %
 %re_BinBl rBl blogunun icerisine bulunan 1 byte' lik
-%gizli veriyi alir ve tB byte' inin icine atarak
+%gizli veriyi alir ve rB byte' inin icine atarak
 %geri dondurur.
 %
 %   Ornek Kullanim - 1
@@ -34,4 +34,4 @@ for i=1:3
 		temp2(1,i*3+j) = temp(8);%Binary olarak yazdigin sayinin sadece en son bitini al.
     end
 end
-tB = uint8(bin2dec(temp2));
+rB = uint8(bin2dec(temp2));
