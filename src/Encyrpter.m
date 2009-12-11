@@ -2,8 +2,8 @@ clc; clear all; close all;
 
 % Algoritma
 % 1. resmi ve veri dosyasini oku
-data = textread('okubeni.txt', '%c');
- img = imread('manzara1.jpg');
+data = textread('mesaj.txt', '%c');
+ img = imread('manzara.bmp');
  
 % TODO: renkli goruntuye veri saklayacak forma donustur
 % Simdilik gri tonajli resimler uzerinde calisalim.
