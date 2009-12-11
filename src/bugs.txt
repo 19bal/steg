@@ -2,9 +2,21 @@
 
 - BUG NAME: MESAJ_UZUNLUGU
 
+Tanım:
+
 Resim içerisine mesaj saklanırken, mesaj uzunluğu verilmediğinden
 restore sırasında sorun yaşıyoruz.
 
+Çözüm:
+
+Resimdeki ilk bloğa mesaj boyutu saklanıyor.
+
 - BUG NAME: MESAJ_UZUNLUGU_BUYUKSE
 
+Tanım:
+
 Mesaj boyutu, resimdeki blok sayisindan daha fazlaysa.
+
+Çözüm:
+
+
