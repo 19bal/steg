@@ -1,6 +1,1 @@
-emre gurbuz
-
-09210148
-
-turhal
-
+emre,gurbuz,09210148,turhal
