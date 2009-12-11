@@ -1,3 +1,6 @@
 11.12.2009 Cuma:
 
-1. Resim içerisine mesaj saklanırken, mesaj uzunluğu verilmediğinden restore sırasında sorun yaşıyoruz.
+BUG NAME: MESAJ_UZUNLUGU
+
+Resim içerisine mesaj saklanırken, mesaj uzunluğu verilmediğinden
+restore sırasında sorun yaşıyoruz.
