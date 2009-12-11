@@ -1,9 +1,25 @@
-clc; clear all; close all;
+function rimg = Encyrpter(img, data)
+%function rimg = Encyrpter(img, data)
+%
+%Metin iceren "data" yi, "img" resmi icerisine bloklama yapmak suretiyle
+%yerlestirerek yeni bir resim ("rimg") uretir ve bunu dondurur.
+%
+%   Ornek Kullanim
+%   -------
+%   data = textread('mesaj.txt', '%c');
+%   img = imread('manzara.bmp');
+%   rimg = Encyrpter(img, data);
+%   imshow(rimg);
+%   imwrite(rimg, 'st_manzara.bmp');
+% 
+%   See also st_BinBl, st_binB
+
+% $Date: 2009/12/09 16:25 $
 
 % Algoritma
 % 1. resmi ve veri dosyasini oku
-data = textread('mesaj.txt', '%c');
- img = imread('manzara.bmp');
+% data = textread('mesaj.txt', '%c');
+%  img = imread('manzara.bmp');
  
 % TODO: renkli goruntuye veri saklayacak forma donustur
 % Simdilik gri tonajli resimler uzerinde calisalim.
@@ -54,5 +70,5 @@ for bX=1:BSX,
     if DI > DS, break; end
 end
 % 5. nihayi resmi kaydet
-imshow(rimg);
-imwrite(rimg, 'st_manzara.bmp');
+% imshow(rimg);
+% imwrite(rimg, 'st_manzara.bmp');
