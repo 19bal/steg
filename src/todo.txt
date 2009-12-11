@@ -36,3 +36,9 @@ Mesaj boyutu, resimdeki blok sayisindan daha fazlaysa.
 Tanım:
 
 mesaj.txt dosyasındaki boşluklarıda dikkate alacak şekilde tasarla
+
+6. ENC_DEC_ISLEVLERI
+
+Tanım:
+
+Enc. ve Dec. islevleri, disaridan parametre alacak sekilde guncellenecek.
