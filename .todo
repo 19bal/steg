@@ -3,4 +3,7 @@
     <note priority="veryhigh" time="1260830397">
         DCT oylama
     </note>
+    <note priority="medium" time="1260830480">
+        renkli görüntülerde bilgi gizleme
+    </note>
 </todo>
