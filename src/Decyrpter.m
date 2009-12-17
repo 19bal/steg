@@ -1,33 +1,27 @@
-function data = Decyrpter(img)
-%function data = Decyrpter(img)
+function data = Decyrpter(mat)
+%function data = Decyrpter(mat)
 %
-%Gizli veri iceren "img" resmi icerisinden, gizlenmis olan veriyi
+%Gizli veri iceren "mat" matrisi icerisinden, gizlenmis olan veriyi
 %cikararak "data" icerisine atar ve bunu dondurur.
 %
 %   Ornek Kullanim
 %   -------
-%   img = imread('st_manzara.bmp');
-%   data = Decyrpter(img)
+%   data = Decyrpter(rmat)
+%   
+%   ***Once Encyrpter ornegini calistirarak "rmat" i elde ediniz.
 % 
 %   See also st_BinBl, st_binB, Encyrpter
 
-% $Date: 2009/12/11 17:02 $
+% $Date: 2009/12/17 17:15 $
 
-% Algoritma
-% 1. sifreli resmi oku
-% img = imread('st_manzara.bmp');
- 
-% 2. bloklara ayir
-% DI: Data Index
-% DS: Data Size
-%  resmin ilk blogundan mesaj uzunlugunu oku
+
 DI = 1;
 
 % BB: Blok Boyutu
 BB = 3; 
 BBX = BB;
 BBY = BB;
-[H, W] = size(img);
+[H, W] = size(mat);
 
 % BS: Blok Sayisi
 BSX = floor(W / BBX);
@@ -42,7 +36,7 @@ for bX=1:BSX,
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
-        rBl = img(konum.sol:konum.sag, konum.ust:konum.alt);
+        rBl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
         
         rB = re_BinBl(rBl);
                 
@@ -58,6 +52,3 @@ for bX=1:BSX,
     end
     if DI > DS, break; end
 end
-% 5. nihayi mesaji kaydet
-% disp(data);
-% dlmwrite('re_mesaj.txt', data, 'delimiter','');

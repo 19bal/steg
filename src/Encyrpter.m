@@ -1,30 +1,20 @@
-function rimg = Encyrpter(img, data)
-%function rimg = Encyrpter(img, data)
+function rmat = Encyrpter(mat, data)
+%function rmat = Encyrpter(mat, data)
 %
-%Metin iceren "data" yi, "img" resmi icerisine bloklama yapmak suretiyle
-%yerlestirerek yeni bir resim ("rimg") uretir ve bunu dondurur.
+%Metin iceren "data" yi, "mat" matrisi icerisine bloklama yapmak suretiyle
+%yerlestirerek yeni bir matris ("rmat") uretir ve bunu dondurur.
 %
 %   Ornek Kullanim
 %   -------
-%   data = textread('mesaj.txt', '%c');
-%   img = imread('manzara.bmp');
-%   rimg = Encyrpter(img, data);
-%   imshow(rimg);
-%   imwrite(rimg, 'st_manzara.bmp');
+%   data = '19mayis';
+%   mat = magic(15);
+%   rmat = Encyrpter(mat, data);
 % 
 %   See also st_BinBl, st_binB, Decyrpter
 
-% $Date: 2009/12/11 17:02 $
-
-% Algoritma
-% 1. resmi ve veri dosyasini oku
-% data = textread('mesaj.txt', '%c');
-%  img = imread('manzara.bmp');
- 
-% TODO: renkli goruntuye veri saklayacak forma donustur
-% Simdilik gri tonajli resimler uzerinde calisalim.
-img = rgb2gray(img);           
-rimg = img;
+% $Date: 2009/12/17 17:15 $
+       
+rmat = mat;
 
 % 2. bloklara ayir
 % DI: Data Index
@@ -37,7 +27,7 @@ DI = 1;
 BB = 3; 
 BBX = BB;
 BBY = BB;
-[H, W] = size(img);
+[H, W] = size(mat);
 
 % BS: Blok Sayisi
 BSX = floor(W / BBX);
@@ -52,7 +42,7 @@ for bX=1:BSX,
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
-        Bl = img(konum.sol:konum.sag, konum.ust:konum.alt);
+        Bl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
         
         if bX == 1 && bY == 1,
             tB = DS;
@@ -64,11 +54,8 @@ for bX=1:BSX,
         
         rBl = st_BinBl(tB, Bl);
         
-        rimg(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;        
+        rmat(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;        
         if DI > DS, break; end
     end
     if DI > DS, break; end
 end
-% 5. nihayi resmi kaydet
-% imshow(rimg);
-% imwrite(rimg, 'st_manzara.bmp');
