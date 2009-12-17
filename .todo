@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="veryhigh" time="1260830397">
+        DCT oylama
+    </note>
+    <note priority="medium" time="1260830480">
+        renkli görüntülerde bilgi gizleme
+    </note>
+</todo>
