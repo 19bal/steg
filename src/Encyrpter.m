@@ -1,8 +1,7 @@
 function rmat = Encyrpter(mat, data)
 %function rmat = Encyrpter(mat, data)
-%
-%Metin iceren "data" yi, "mat" matrisi icerisine bloklama yapmak suretiyle
-%yerlestirerek yeni bir matris ("rmat") uretir ve bunu dondurur.
+% Metin iceren "data" yi, "mat" matrisi icerisine bloklama yapmak suretiyle
+% yerlestirerek yeni bir matris ("rmat") uretir ve bunu dondurur.
 %
 %   Ornek Kullanim
 %   -------
