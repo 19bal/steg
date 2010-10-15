@@ -1,4 +1,4 @@
-function result = test_binB()
+% function result = demo_binB()
 %TEST_BINB st_binB ve re_binB yi test eder
 %   ...
 %   Example
@@ -10,7 +10,7 @@ function result = test_binB()
 % $Date: 2009/11/18 16:25 $
 
 for B=bin2dec('00000000'):bin2dec('11111111')
-    b = randi(2) - 1; % ya 1 ya da 0
+    b = randint; % ya 1 ya da 0
     rB = st_binB(b, B);
     ob = re_binB(rB); % observed
     if ob ~= b
@@ -21,5 +21,5 @@ for B=bin2dec('00000000'):bin2dec('11111111')
     end
 end
 
-fprintf('ST_BINB - RE_BINB testi basarili');
+fprintf('ST_BINB - RE_BINB testi basarili\n');
 result = true;
