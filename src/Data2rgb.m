@@ -10,7 +10,7 @@ function Data2rgb(ImPath, data, stImPath, renk)
 %   -------
 %   kaynak_resim = 'manzara.bmp';
 %   veri = 'omu.edu.tr';
-%   hedef_resim = 'sonuc.jpg';
+%   hedef_resim = 'sonuc.png';
 %   Data2rgb(kaynak_resim, veri, hedef_resim, 1);
 %
 % Yukaridaki ornek calistirildiktan sonra, calisma dizinimizde,
