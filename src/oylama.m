@@ -5,6 +5,12 @@ function oy = oylama(mat)
 %   -------
 %   mat = magic(15);
 %   oy = oylama(mat)
+%   [s, ind] = sort(oy(:));
+%   % mesaj uzunlugu kadar olanini sec
+%   % satir-sutun indislerini hesapla
+%   [i, j] = ind2sub([5,5], ind)
+%   % satir indisine gore sirala
+%   % mesaji yerlestir
 
 % BB: Blok Boyutu
 BB = 3; 
@@ -34,6 +40,7 @@ function rate = zigzag(fBl)
 KATSAYI = [ 0 1 2; ...
             1 2 3; ...
             2 3 4];
+fBl = fBl/fBl(1);       
 rate = abs(fBl) .* KATSAYI;
-rate = sum(rate(:));
+rate = mean(rate(:));
 
