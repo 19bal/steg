@@ -36,11 +36,11 @@ for bX=1:BSX,
     end
 end
 
-function rate = zigzag(fBl)
+function mn_rt = zigzag(fBl)
 KATSAYI = [ 0 1 2; ...
             1 2 3; ...
             2 3 4];
-fBl = fBl/fBl(1);       
+fBl = fBl/fBl(1);               % normalizasyon
 rate = abs(fBl) .* KATSAYI;
-rate = mean(rate(:));
+mn_rt = mean(rate(:));
 
