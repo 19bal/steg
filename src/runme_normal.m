@@ -8,7 +8,7 @@ renk = 1;
 %Kirmizi icin 1, Yesil icin 2, Mavi icin 3.
 
 tic
-Data2rgb(kaynak_resim, veri, hedef_resim, renk);
+Data2rgb_normal(kaynak_resim, veri, hedef_resim, renk);
 saklama_suresi = toc
 
 figure(1)
@@ -19,5 +19,5 @@ figure(1)
 rgb = imread(hedef_resim);
 
 tic
-gizli_mesaj = Decyrpter(rgb(:,:,renk))
+gizli_mesaj = Decyrpter_normal(rgb(:,:,renk))
 restore_suresi = toc

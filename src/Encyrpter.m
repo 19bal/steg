@@ -49,7 +49,7 @@ for bX=1:BSX,
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
-        Bl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
+        Bl = mat(konum.ust:konum.alt, konum.sol:konum.sag);
          
         if DI <= DS & syer(DI) == ind  % sakla
             if dbg, syer(DI), DI,   end
@@ -63,7 +63,7 @@ for bX=1:BSX,
             rBl = st_BinBl_saklama(Bl);
         end              
         
-        rmat(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;        
+        rmat(konum.ust:konum.alt, konum.sol:konum.sag) = rBl;        
         ind = ind + 1;
     end
 end

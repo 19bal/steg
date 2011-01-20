@@ -1,12 +1,15 @@
-function data = Decyrpter(mat)
-%function data = Decyrpter(mat)
+function data = Decyrpter_normal(mat)
+%function data = Decyrpter_normal(mat)
 %
 %Gizli veri iceren "mat" matrisi icerisinden, gizlenmis olan veriyi
 %cikararak "data" icerisine atar ve bunu dondurur.
 %
 %   Ornek Kullanim
 %   -------
-%   data = Decyrpter(rmat)
+%   data = '19mayis';
+%   mat = magic(15);
+%   rmat = Encyrpter_normal(mat, data);
+%   data = Decyrpter_normal(rmat)
 %   
 %   ***Once Encyrpter ornegini calistirarak "rmat" i elde ediniz.
 % 

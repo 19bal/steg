@@ -37,7 +37,7 @@ for bX=1:BSX,
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
-        rBl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
+        rBl = mat(konum.ust:konum.alt, konum.sol:konum.sag);
 
         if re_varmi(rBl)
             rB = re_BinBl(rBl);

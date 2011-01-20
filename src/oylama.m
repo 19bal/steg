@@ -29,7 +29,7 @@ for bX=1:BSX,
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
-        Bl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
+        Bl = mat(konum.ust:konum.alt, konum.sol:konum.sag);
    
         fBl = dct2(Bl);
         oy(bX, bY) = zigzag(fBl);

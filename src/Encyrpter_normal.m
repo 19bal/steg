@@ -1,5 +1,5 @@
-function rmat = Encyrpter(mat, data)
-%function rmat = Encyrpter(mat, data)
+function rmat = Encyrpter_normal(mat, data, dbg)
+%function rmat = Encyrpter(mat, data, dbg)
 % Metin iceren "data" yi, "mat" matrisi icerisine bloklama yapmak suretiyle
 % yerlestirerek yeni bir matris ("rmat") uretir ve bunu dondurur.
 %
@@ -7,9 +7,9 @@ function rmat = Encyrpter(mat, data)
 %   -------
 %   data = '19mayis';
 %   mat = magic(15);
-%   rmat = Encyrpter(mat, data);
+%   rmat = Encyrpter_normal(mat, data, true);
 % 
-%   See also st_BinBl, st_binB, Decyrpter
+%   See also st_BinBl, st_binB, Decyrpter_normal
 
 % $Date: 2009/12/17 17:15 $
        
