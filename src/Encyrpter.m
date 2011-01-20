@@ -33,9 +33,7 @@ BSX = floor(W / BBX);
 BSY = floor(H / BBX);
 
 % < OYLAMA MEKANIZMASI
-oy = oylama(mat);
-[s, syer] = sort(oy(:));
-syer = sort(syer(1:DS));
+syer = oylama(mat, DS);
 if dbg, syer,   end    
 % > OYLAMA MEKANIZMASI
 

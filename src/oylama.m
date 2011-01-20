@@ -1,16 +1,11 @@
-function oy = oylama(mat)
-% function oy = oylama(mat)
+function syer = oylama(mat, DS)
+% function syer = oylama(mat, DS)
 % 
 %   Ornek Kullanim
 %   -------
 %   mat = magic(15);
-%   oy = oylama(mat)
-%   [s, ind] = sort(oy(:));
-%   % mesaj uzunlugu kadar olanini sec
-%   % satir-sutun indislerini hesapla
-%   [i, j] = ind2sub([5,5], ind)
-%   % satir indisine gore sirala
-%   % mesaji yerlestir
+%   data = '19mayis';
+%   syer = oylama(mat, length(data))
 
 % BB: Blok Boyutu
 BB = 3; 
@@ -36,6 +31,10 @@ for bX=1:BSX,
     end
 end
 
+[s, syer] = sort(oy(:));
+syer = sort(syer(1:DS));
+
+% HELPER
 function mn_rt = zigzag(fBl)
 KATSAYI = [ 0 1 2; ...
             1 2 3; ...
