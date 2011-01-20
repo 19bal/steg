@@ -20,7 +20,8 @@ function rBl = st_BinBl(tB, Bl)
 teB = dec2bin(tB, 8);
 in = 1;
 
-rBl(1, 1) = Bl(1, 1);
+rBl(1, 1) = st_binB(1, Bl(1, 1));
+
 for i=1:3
     for j=1:3
         if i == 1 & j == 1, continue; end

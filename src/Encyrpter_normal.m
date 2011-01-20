@@ -1,5 +1,5 @@
-function rmat = Encyrpter(mat, data, dbg)
-%function rmat = Encyrpter(mat, data, dbg)
+function rmat = Encyrpter(mat, data)
+%function rmat = Encyrpter(mat, data)
 % Metin iceren "data" yi, "mat" matrisi icerisine bloklama yapmak suretiyle
 % yerlestirerek yeni bir matris ("rmat") uretir ve bunu dondurur.
 %
@@ -7,12 +7,12 @@ function rmat = Encyrpter(mat, data, dbg)
 %   -------
 %   data = '19mayis';
 %   mat = magic(15);
-%   rmat = Encyrpter(mat, data, true);
+%   rmat = Encyrpter(mat, data);
 % 
 %   See also st_BinBl, st_binB, Decyrpter
 
 % $Date: 2009/12/17 17:15 $
-
+       
 rmat = mat;
 
 % 2. bloklara ayir
@@ -32,38 +32,29 @@ BBY = BB;
 BSX = floor(W / BBX);
 BSY = floor(H / BBX);
 
-% < OYLAMA MEKANIZMASI
-oy = oylama(mat);
-[s, syer] = sort(oy(:));
-syer = sort(syer(1:DS));
-if dbg, syer,   end    
-% > OYLAMA MEKANIZMASI
-
-ind = 1;
 % 3. her bir bloga veriden bir Bayt yerlestir
 % 4. bloklari birlestir
 for bX=1:BSX,
-    for bY=1:BSY,
+    for bY=1:BSY,       
         konum.sol = (bX - 1) * BBX + 1;
         konum.sag = konum.sol + BBX - 1;
         konum.ust = (bY - 1) * BBY + 1;
         konum.alt = konum.ust + BBY - 1;
         
         Bl = mat(konum.sol:konum.sag, konum.ust:konum.alt);
-         
-        if DI <= DS & syer(DI) == ind  % sakla
-            if dbg, syer(DI), DI,   end
-            
+        
+        if bX == 1 && bY == 1,
+            tB = DS;
+        else
             chr = data(DI);
             tB = unicode2native(chr);
             DI = DI + 1;
-
-            rBl = st_BinBl(tB, Bl);            
-        else                % saklama
-            rBl = st_BinBl_saklama(Bl);
-        end              
+        end
+        
+        rBl = st_BinBl(tB, Bl);
         
         rmat(konum.sol:konum.sag, konum.ust:konum.alt) = rBl;        
-        ind = ind + 1;
+        if DI > DS, break; end
     end
+    if DI > DS, break; end
 end
